@@ -63,7 +63,7 @@
                             </div>
                             <div class="radio"></div>
                         </li>
-                        <li>
+                        <li class="active">
                             <div class="column">
                                 <div class="icon"><i class="fas fa-user-friends"></i></div>
                                 <div class="details">
@@ -107,5 +107,18 @@
                 </section>
             </div>
         </div>
+
+        <script>
+            const container = document.querySelector('.container')
+            const privacy = document.querySelector('.privacy')
+            const arrowBack = document.querySelector('.arrow-back')
+
+            privacy.addEventListener('click', e => {
+                container.classList.add('active')
+            })
+            arrowBack.addEventListener('click', e => {
+                container.classList.remove('active')
+            })
+        </script>
     </body>
 </html>
